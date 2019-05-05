@@ -1,3 +1,42 @@
+
+# To-do list application
+
+This is my first time using [React Hooks](https://reactjs.org/docs/hooks-intro.html).  
+Let's see how this goes, shall we?
+
+### Coding challenge
+
+#### Main Features
+- [x] O usuário deverá conseguir adicionar items
+- [x] O usuário deverá conseguir marcar um item como feito
+- [x] O usuário deverá conseguir desmarcar um item como feito
+- [x] O usuário deverá conseguir diferenciar visualmente um item marcado à um item não marcado
+- [ ] O usuário deverá conseguir filtrar os items por (Todos|Pendentes|Resolvidos)
+- [x] Experiência do usuário fácil e direta.
+
+#### Extra Features
+- [x] **O uso de HOOKS**
+- [x] **Persistência de dados no LocalStorage**
+- [x] Aplicação com uma boa experiência
+- [x] A possibilidade de excluir um item
+- [x] A possibilidade de editar um item 
+- [x] O uso do Git e organização de commits será um diferencial positivo.  
+
+---
+
+### What's next?
+* **URGENT: FILTER TASKS (ALL|PENDING|COMPLETED)**
+* **URGENT: IMPROVE ACCESSIBILITY**
+* FIX URGENT BUG: 'Warning: Failed prop type: You provided a `checked` prop to a form field without an `onChange` handler' (file Task.js)
+* Fix CSS bug: hovering over one button triggers hover state of all buttons
+* Add one more media query breakpoint (for tablets)
+* Clean up CSS using variables (and maybe Sass) 
+* Check cross-browser compatibility
+* Check cross-platform compatibility
+* Maybe make it a PWA?
+  
+---
+    
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,27 +81,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
