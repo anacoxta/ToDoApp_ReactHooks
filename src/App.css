@@ -68,7 +68,6 @@ body {
   border: 0;
   margin: 0 0 0 0.5rem;
   padding: 0.1rem 0.3rem;
-  border-radius: 0.3rem;
   background-color: #C5CAE9;
   text-transform: uppercase;
   font-family: 'Roboto Mono', monospace;
@@ -102,7 +101,7 @@ body {
   padding-left: 2.2rem;
 }
 
-/* Hide the browser's default checkbox */
+/* Hide default checkbox */
 .task-container [type="checkbox"] {
   position: absolute;
   opacity: 0;
@@ -112,7 +111,7 @@ body {
   background-color: red;
 }
 
-/* Create a custom checkbox */
+/* Custom checkbox */
 .styled-checkmark {
   position: absolute;
   top: 0;
@@ -122,29 +121,25 @@ body {
   background-color: #C5CAE9;
 }
 
-/* On mouse-over, add a grey background color */
 .task-container:hover input ~ .styled-checkmark {
   background-color: #BDBDBD;
 }
 
-/* When the checkbox is checked, add a blue background */
 .task-container input:checked ~ .styled-checkmark {
   background-color: #3f51b5;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
+/* checkmark symbol */
 .styled-checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .task-container input:checked ~ .styled-checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .task-container .styled-checkmark:after {
   left: .5em;
   top: .25rem;
@@ -170,8 +165,11 @@ body {
 }
 
 
+/*
+*TO-DO:
+add one more media query breakpoint (or more, if needed)
+*/
 
-/* future implementation: add at least one more media query breakpoint */
 /* DESKTOP */
 
 @media only screen and (min-width: 768px) {

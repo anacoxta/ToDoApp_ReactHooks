@@ -30,10 +30,7 @@ function TasksApp() {
   }
 
   const removeTask = taskId => {
-    //filter task for removal
     const updatedTasks = tasks.filter(task => task.id !== taskId)
-    //call setTasks with new array
-    setTasks(updatedTasks)
   }
 
   const toggleTask = taskId => {

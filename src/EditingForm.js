@@ -17,7 +17,6 @@ function EditingForm({ id, text, editTask, toggleEditingForm }) {
         autoFocus
         type="text"
         className="input editing"
-        // placeholder="Adicione nova tarefa"
         value={value}
         onChange={handleChange}
       />
