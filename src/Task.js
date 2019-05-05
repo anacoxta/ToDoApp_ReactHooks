@@ -10,19 +10,22 @@ function Task({ id, text, completed, removeTask, toggleTask, editTask }) {
       {isEditing ? (
         <EditingForm editTask={editTask} id={id} text={text} toggleEditingForm={toggle}/>
       ) : (
-        <>
-          <input
-            type="checkbox"
-            tabIndex={-1}
-            checked={completed}
-            onClick={() => toggleTask(id)}
-          />
+      
+        // *KNOW BUG:
+        // 'Warning: Failed prop type: You provided a `checked` prop to a form field without an `onChange` handler.'
+        
+        // *TO-DO —> REFACTOR LATER:
+        <label className="task-container">
+          <input type="checkbox" checked={completed} onClick={() => toggleTask(id)}/>
+          <span className="styled-checkmark"  ></span>
           <span className={completed ? 'done' : ''}>{text}</span>
-          <button className="btn-edit" onClick={toggle}>Edit</button>
-          <button className="btn-delete" onClick={() => removeTask(id)}>
-            x
-          </button>
-        </>
+          <div className='align-right'>
+            <button className="btn-edit" onClick={toggle}>Edit</button>
+            <button className="btn-delete" onClick={() => removeTask(id)}>
+              x
+            </button>
+          </div>
+        </label>
       )}
     </li>
   )

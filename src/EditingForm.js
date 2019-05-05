@@ -23,25 +23,6 @@ function EditingForm({ id, text, editTask, toggleEditingForm }) {
       />
     </form>
 
-/* PEDAÇO COPIADO DO TasksForm.js ----------------
-    <form
-      className="form"
-      onSubmit={e => {
-        e.preventDefault()
-        addTask(value)
-        reset()
-      }}
-    >
-      <input
-        autoFocus
-        type="text"
-        className="input"
-        placeholder="Adicione nova tarefa"
-        value={value}
-        onChange={handleChange}
-      />
-    </form> 
- ------------------------------------------------*/
   )
 }
 

@@ -7,7 +7,7 @@ import uuid from 'uuid/v4'
 function TasksApp() {
   const initialTasks = [
     { id: 1, text: 'Contratar a Ana', completed: false },
-    { id: 2, text: 'Comprar mais banana', completed: true },
+    { id: 2, text: 'Comprar mais banana', completed: false }
   ]
 
   const [tasks, setTasks] = useState(initialTasks)

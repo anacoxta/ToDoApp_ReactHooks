@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700');
 
+
+/*
+THIS STYLESHEET NEEDS URGENT REFACTORING:
+
+*TO-DO:
+  —> CSS variables
+  —> Maybe switch to Sass for maintainability?
+*/
+
+
 /* MOBILE FIRST */
 
 body {
@@ -49,6 +59,10 @@ body {
   text-decoration: #757575 line-through;
 }
 
+.align-right {
+  float: right;
+}
+
 .single-task button {
   outline: 0;
   border: 0;
@@ -61,6 +75,8 @@ body {
   font-size: 1.1rem;
   color: #3F51B5;
 }
+
+/* KNOWN BUG: 'X' BUTTON HOVER TRIGGERALSO  */
 
 .single-task button:hover {
   background-color: #BDBDBD;
@@ -77,6 +93,68 @@ body {
   font-size: 1.1rem;
   padding: 1rem;
   border: 0;
+}
+
+.task-container {
+
+  display: block;
+  position: relative;
+  padding-left: 2.2rem;
+}
+
+/* Hide the browser's default checkbox */
+.task-container [type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  background-color: red;
+}
+
+/* Create a custom checkbox */
+.styled-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #C5CAE9;
+}
+
+/* On mouse-over, add a grey background color */
+.task-container:hover input ~ .styled-checkmark {
+  background-color: #BDBDBD;
+}
+
+/* When the checkbox is checked, add a blue background */
+.task-container input:checked ~ .styled-checkmark {
+  background-color: #3f51b5;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.styled-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.task-container input:checked ~ .styled-checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.task-container .styled-checkmark:after {
+  left: .5em;
+  top: .25rem;
+  width: .25rem;
+  height: .6rem;
+  border: solid white;
+  border-width: 0 .2rem .2rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .editing {
@@ -111,10 +189,17 @@ body {
 
   .single-task {
     list-style: none;
+    padding: 1rem .5rem;
   }
 
   .input {
     font-size: 1rem;
   }
+
+  .styled-checkmark {
+    position: absolute;
+    top: 0rem;
+  }
+  
 
 }
