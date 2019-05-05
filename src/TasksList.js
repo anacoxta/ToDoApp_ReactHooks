@@ -1,7 +1,7 @@
 import React from 'react'
 import Task from './Task'
 
-function TasksList({tasks, removeTask, toggleTask }) {
+function TasksList({tasks, removeTask, toggleTask, editTask }) {
   //if (tasks.length) {
     return (
       <ul className="list">
@@ -12,9 +12,9 @@ function TasksList({tasks, removeTask, toggleTask }) {
             key={task.id}
             text={task.text}
             completed={task.completed}
-            // deleteTask={deleteTask}
             removeTask={removeTask}
             toggleTask={toggleTask}
+            editTask={editTask}
           />
         )
         )

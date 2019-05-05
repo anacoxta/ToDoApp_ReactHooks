@@ -37,6 +37,13 @@ function TasksApp() {
     setTasks(updatedTasks)
   }
 
+  const editTask = (taskId, newTask) => {
+    const updatedTasks = tasks.map(task =>
+      task.id === taskId ? { ...task, text: newTask} : task
+    )
+    setTasks(updatedTasks)
+  }
+
   return (
     <main className="app">
       <header className="app-header">
@@ -47,6 +54,7 @@ function TasksApp() {
         tasks={tasks}
         removeTask={removeTask}
         toggleTask={toggleTask}
+        editTask={editTask}
       />
       <TasksForm addTask={addTask} />
     </main>
