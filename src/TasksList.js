@@ -1,19 +1,19 @@
 import React from 'react'
 import Task from './Task'
 
-function TasksList(props) {
+function TasksList({tasks, removeTask}) {
   //if (tasks.length) {
     return (
       <ul className="list">
 
-        {props.tasks.map(task => (
+        {tasks.map(task => (
           <Task
             id={task.id}
-            text={task.text}
             key={task.id}
+            text={task.text}
             completed={task.completed}
             // deleteTask={deleteTask}
-            // removeTask={removeTask}
+            removeTask={removeTask}
           />
         )
         )

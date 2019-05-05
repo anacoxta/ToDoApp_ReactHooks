@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import TasksList from './TasksList'
 import TasksForm from './TasksForm'
 import './App.css'
+import uuid from 'uuid/v4'
 
 function TasksApp() {
   const initialTasks = [
@@ -13,7 +14,7 @@ function TasksApp() {
 
   const addTask = newTaskText => {
     setTasks([...tasks, {
-      id: 3, text: newTaskText, completed: false
+      id: uuid(), text: newTaskText, completed: false
     }])
   }
 
