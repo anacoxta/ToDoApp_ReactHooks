@@ -13,9 +13,14 @@ function TasksApp() {
   const [tasks, setTasks] = useState(initialTasks)
 
   const addTask = newTaskText => {
-    setTasks([...tasks, {
-      id: uuid(), text: newTaskText, completed: false
-    }])
+    setTasks([
+      ...tasks,
+      {
+        id: uuid(),
+        text: newTaskText,
+        completed: false,
+      },
+    ])
   }
 
   const removeTask = taskId => {
@@ -25,14 +30,25 @@ function TasksApp() {
     setTasks(updatedTasks)
   }
 
+  const toggleTask = taskId => {
+    const updatedTasks = tasks.map(task =>
+      task.id === taskId ? { ...task, completed: !task.completed } : task
+    )
+    setTasks(updatedTasks)
+  }
+
   return (
     <main className="app">
       <header className="app-header">
         <h1>Task Manager</h1>
       </header>
 
-      <TasksList tasks={tasks} removeTask={removeTask}/>
-      <TasksForm addTask={addTask}/>
+      <TasksList
+        tasks={tasks}
+        removeTask={removeTask}
+        toggleTask={toggleTask}
+      />
+      <TasksForm addTask={addTask} />
     </main>
   )
 }
