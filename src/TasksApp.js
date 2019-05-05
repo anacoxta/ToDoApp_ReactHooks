@@ -1,16 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import TasksList from './TasksList'
 import TasksForm from './TasksForm'
 import './App.css'
 import uuid from 'uuid/v4'
 
 function TasksApp() {
-  const initialTasks = [
-    { id: 1, text: 'Contratar a Ana', completed: false },
-    { id: 2, text: 'Comprar mais banana', completed: false }
-  ]
+
+  // const initialTasks = 
+  //   [{ id: 1, text: 'Contratar a Ana', completed: false },
+  //    { id: 2, text: 'Comprar mais banana', completed: false }]  
+
+  const initialTasks = JSON.parse(window.localStorage.getItem('tasks') || '[]')
 
   const [tasks, setTasks] = useState(initialTasks)
+
+  useEffect(() => {
+    window.localStorage.setItem('tasks', JSON.stringify(tasks))
+  }, [tasks])
 
   const addTask = newTaskText => {
     setTasks([

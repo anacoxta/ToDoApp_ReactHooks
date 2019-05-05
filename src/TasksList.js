@@ -2,7 +2,7 @@ import React from 'react'
 import Task from './Task'
 
 function TasksList({tasks, removeTask, toggleTask, editTask }) {
-  //if (tasks.length) {
+  if (tasks.length)
     return (
       <ul className="list">
 
@@ -23,7 +23,7 @@ function TasksList({tasks, removeTask, toggleTask, editTask }) {
 
       </ul>
     )
-  //} return null;
+  return null;
 
 }
 
