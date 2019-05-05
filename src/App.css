@@ -44,6 +44,29 @@ body {
   border-bottom: 1px solid #e6e6e6;
 }
 
+.done {
+  color: #536DFE;
+  text-decoration: #757575 line-through;
+}
+
+.single-task button {
+  outline: 0;
+  border: 0;
+  margin: 0 0 0 0.5rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+  background-color: #C5CAE9;
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  color: #3F51B5;
+}
+
+.single-task button:hover {
+  background-color: #BDBDBD;
+  color: #303F9F;
+}
+
 .form {
   width: 100%;
 }

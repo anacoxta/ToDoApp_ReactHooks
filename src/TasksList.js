@@ -1,16 +1,28 @@
 import React from 'react'
+import Task from './Task'
 
 function TasksList(props) {
+  //if (tasks.length) {
+    return (
+      <ul className="list">
 
-  return (
+        {props.tasks.map(task => (
+          <Task
+            id={task.id}
+            text={task.text}
+            key={task.id}
+            completed={task.completed}
+            // deleteTask={deleteTask}
+            // removeTask={removeTask}
+          />
+        )
+        )
+        }
 
-    <ul className="list">
-      {props.tasks.map(task => (
-        <li className="single-task">{task.text}</li>
-      ))}
-    </ul>
-    
-  )
+
+      </ul>
+    )
+  //} return null;
 
 }
 
